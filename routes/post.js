@@ -67,7 +67,7 @@ router.post('/add', upload.single('mainImage'), function(req, res, next) {
 router.get('/add', function(req, res, next) {
 	let categories = db.get('categories');
 	categories.find({},{},function(err, categories){
-		res.render('addpost',{
+		res.render('addPost',{
   			'title': 'Add Post',
   			'categories': categories
   		});
